@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 def fetch_financial_data(company="AMZN"):
     import pandas_datareader.data as web
-    return web.Datareader(name=company, data_source='stooq')
+    return web.DataReader(name=company, data_source='stooq')
 
 df = fetch_financial_data()
 df.reset_index(inplace=True)
